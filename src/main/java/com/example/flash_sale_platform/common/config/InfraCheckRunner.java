@@ -3,11 +3,13 @@ package com.example.flash_sale_platform.common.config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile("dev")
 public class InfraCheckRunner implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(InfraCheckRunner.class);
